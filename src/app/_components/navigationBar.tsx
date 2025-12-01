@@ -5,7 +5,7 @@ export default function NavigationBar() {
   const { locale } = useParams();
   const lague=[
     {id:'fr', label:`🇫🇷 FR`},
-    {id:'en', label:`🇬🇧 EN`}
+    // {id:'en', label:`🇬🇧 EN`}
   ]
   return (
     <div className='px-6 py-4 flex justify-end transition gap-4 bg-gray-900 lg:justify-between w-full text-white font-bold'>

@@ -4,7 +4,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { SiReact, SiNextdotjs, SiFlutter, SiNodedotjs, SiNestjs, SiDocker, SiGithubactions, SiMysql, SiRedis, SiMongodb } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiFlutter, SiNodedotjs, SiNestjs, SiDocker, SiGithubactions, SiMysql, SiRedis, SiMongodb, SiRedux } from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +13,7 @@ const skills = [
   { name: "Next.js", icon: <SiNextdotjs size={40} color="#fff" /> },
   { name: "Flutter", icon: <SiFlutter size={40} color="#02569B" /> },
   { name: "Node.js", icon: <SiNodedotjs size={40} color="#339933" /> },
-  { name: "NestJS", icon: <SiNestjs size={40} color="#E0234E" /> },
+  { name: "Redux", icon: <SiRedux size={40} color="#E0234E" /> },
   { name: "Docker", icon: <SiDocker size={40} color="#2496ED" /> },
   { name: "GitHub Actions", icon: <SiGithubactions size={40} color="#2088FF" /> },
   { name: "MongoDB", icon: <SiMongodb size={40} color="#4DB33D" /> },,
