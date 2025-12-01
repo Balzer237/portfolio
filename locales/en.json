@@ -1,0 +1,13 @@
+{
+  "home": {
+    "title": "Bienvenue sur mon site",
+    "subtitle": "Ceci est la version française"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler"
+  },
+  "sidebare":{
+    "home":"Home"
+  }
+}
