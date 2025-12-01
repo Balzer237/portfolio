@@ -8,66 +8,65 @@ export default function AboutPage() {
       {/* Introduction */}
       
      <div>
-        <div className="flex flex-col-reverse lg:flex-row ">
+        <div className="flex flex-col-reverse lg:flex-row">
             <div>
                 <section className="max-w-4xl">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">About Me</h1>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6">À propos de moi</h1>
                 <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
-                I’m <span className="text-white font-semibold">Kevin</span>, a developer specialized in
-                <span className="text-white"> Frontend, Mobile and Backend engineering</span>. I build
-                modern, animated and scalable digital experiences with <span className="text-white">Next.js, Flutter and NestJS</span>.
+                    Je suis <span className="text-white font-semibold">Kevin</span>, un développeur spécialisé en
+                    <span className="text-white"> ingénierie Frontend, Mobile</span>. Je crée
+                    des expériences digitales modernes, animées et scalables avec <span className="text-white">Next.js, Flutter</span>.
                 </p>
-            </section>
+                </section>
 
-            {/* Story */}
-            <section className="mt-16 max-w-4xl space-y-4">
-                <h2 className="text-3xl font-semibold">My Journey</h2>
-                <p className="text-neutral-300">
-                I started coding with curiosity and quickly discovered my passion for clean interfaces,
-                smooth animations and strong architectures. Over the years, I’ve built professional
-                applications for finance, micro‑banking, internal systems and modern web platforms.
-                </p>
-                <p className="text-neutral-300">
-                Today, I help companies build high‑quality products from design to deployment: UI/UX,
-                development, optimization and DevOps pipelines.
-                </p>
-            </section>
+                {/* Histoire */}
+                <section className="mt-16 max-w-4xl space-y-4">
+                    <h2 className="text-3xl font-semibold">Mon Parcours</h2>
+                    <p className="text-neutral-300">
+                        Mon aventure dans la tech a débuté au lycée avec la série <span className="text-white font-semibold">Silicon Valley</span> (superbe serie). 
+                        Son univers m'a inspiré et depuis, je vis selon ce cycle : <span className="text-white">découvrir</span>, 
+                        <span className="text-white"> apprendre</span>, <span className="text-white">réaliser</span>.
+                    </p>
+                    <p className="text-neutral-300">
+                        De cette inspiration est née une passion. J'ai mis ces compétences au service de projets concrets dans la finance, 
+                        la micro‑banque et le développement web moderne.
+                    </p>
+                    <p className="text-neutral-300">
+                        Aujourd'hui, j'accompagne les entreprises dans la création de produits digitaux performants, 
+                        en maîtrisant chaque étape : UI/UX, développement, optimisation et DevOps.
+                    </p>
+                    </section>
 
-            {/* Differentiators */}
-            <section className="mt-16 max-w-4xl">
-                <h2 className="text-3xl font-semibold mb-4">What Makes Me Different</h2>
+                {/* Différenciateurs */}
+                <section className="mt-16 max-w-4xl">
+                <h2 className="text-3xl font-semibold mb-4">Ce qui me distingue</h2>
                 <ul className="list-disc ml-6 space-y-2 text-neutral-300">
-                <li>Strong expertise in animations (GSAP, Framer Motion,Locomotive lenix)</li>
-                <li>Clean architecture: Domain‑Driven Design & Hexagonal</li>
-                <li>Full‑stack capability: web, mobile, backend & DevOps</li>
-                <li>Experience with fintech & microfinance systems</li>
-                <li>High‑quality, maintainable and scalable code</li>
+                    <li>Expertise solide en animations (GSAP, Framer Motion, Locomotive)</li>
+                    <li>Architecture propre : Domain‑Driven Design & Hexagonale</li>
+                    <li>Capacité full‑stack : web, mobile & DevOps</li>
+                    <li>Expérience avec les systèmes fintech & microfinance</li>
+                    <li>Code de haute qualité, maintenable et scalable</li>
                 </ul>
-            </section>
+                </section>
             </div>
 
-            <div className="w-full  flex items-center justify-end">
-               
-                <div className="relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
-                    <motion.img
-                    layoutId="profil"
-                    src="/images/me.jpeg"
-                    alt="Profil"
-                    className="relative w-40 h-40 md:w-100 md:h-100 rounded-full object-cover border-4 border-white/10 shadow-2xl"
-                />
-                </div>
-                
-                
-            </div>
-        </div>
+  <div className="w-full flex items-center justify-end">
+    <div className="relative">
+      <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
+      <motion.img
+        layoutId="profil"
+        src="/images/me.jpeg"
+        alt="Profil"
+        className="relative w-40 h-40 md:w-100 md:h-100 rounded-full object-cover border-4 border-white/10 shadow-2xl"
+      />
+    </div>
+  </div>
+</div>
 
       
 
       {/* Tech Stack */}
       <section className="mt-20">
-        <h2 className="text-3xl font-semibold mb-8">Technical Stack</h2>
-
        <SkillsTech/>
       </section>
 

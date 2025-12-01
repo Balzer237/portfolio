@@ -52,29 +52,30 @@ const projects = [
 export default function WorkPage() {
   return (
     <div className="min-h-screen text-white p-6 max-w-7xl mx-auto">
-        <div className='w-full flex lg:flex-row-reverse  justify-around'>
+        <div className='w-full flex flex-col justify-center items-center lg:flex-row-reverse  justify-around'>
           <div className="relative">
-          <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
-            <motion.img
-              layoutId="profil"
-              src="/images/me.jpeg"
-              alt="Profil"
-              className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white/10 shadow-2xl"
-            />
-        </div>
-      {/* En-tête */}
-      <motion.div 
-        className="text-center mb-16"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r  text-white">
-          Mes Projets
-        </h1>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Des solutions digitales qui allient innovation technique, design élégant et expérience utilisateur exceptionnelle.
-        </p>
-      </motion.div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl">
+            </div>
+              <motion.img
+                layoutId="profil"
+                src="/images/me.jpeg"
+                alt="Profil"
+                className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white/10 shadow-2xl"
+              />
+          </div>
+          {/* En-tête */}
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r  text-white">
+              Mes Projets
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Des solutions digitales qui allient innovation technique, design élégant et expérience utilisateur exceptionnelle.
+            </p>
+          </motion.div>
         </div>
 
       {/* Projets avec design horizontal/vertical alterné */}

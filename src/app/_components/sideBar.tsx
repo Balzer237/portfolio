@@ -16,20 +16,19 @@ const NAV_ITEMS = [
   { label: "Home", href: "/me", icon: FiHome },
   { label: "About", href: "/me/about", icon: FiUser },
   { label: "Work", href: "/me/work", icon: FiFolder },
-  { label: "Case Studies", href: "/case-studies", icon: FiFileText },
   { label: "Services", href: "/me/services", icon: FiFolder },
-  { label: "Blog", href: "/blog", icon: FiFileText },
+  { label: "Blog", href: "/blog", icon: FiFileText ,active:false},
   { label: "Contact", href: "/me/contact", icon: FiMail },
 ];
 
-function NavItem({ href, icon: Icon, label, active, onClick }) {
+function NavItem({ href, icon: Icon, label, active, onClick,canClick=true }) {
  
   return (
     <Link
-      href={href}
-      onClick={onClick}
+      href={canClick?href:''}
+      onClick={canClick&&onClick}
       className={`flex items-center gap-3 px-4 py-2 rounded-xl transition-all
-        ${active ? "bg-gray-700 font-semibold" : "hover:bg-gray-800"}`
+        ${active ? "bg-gray-700 font-semibold" :canClick? "hover:bg-gray-800":"text-gray-600"}`
       }
     >
       <Icon className="text-xl" />
@@ -58,6 +57,7 @@ const {t}=useTranslation()
         icon={item.icon}
         active={pathname === `/${locale}${item.href}`}
         onClick={onClick}
+        canClick={item.active??true}
       />
     ));
   return (
