@@ -4,7 +4,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { SiReact, SiNextdotjs, SiFlutter, SiNodedotjs, SiNestjs, SiDocker, SiGithubactions, SiMysql, SiRedis } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiFlutter, SiNodedotjs, SiNestjs, SiDocker, SiGithubactions, SiMysql, SiRedis, SiMongodb } from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +16,7 @@ const skills = [
   { name: "NestJS", icon: <SiNestjs size={40} color="#E0234E" /> },
   { name: "Docker", icon: <SiDocker size={40} color="#2496ED" /> },
   { name: "GitHub Actions", icon: <SiGithubactions size={40} color="#2088FF" /> },
-  { name: "MySQL", icon: <SiMysql size={40} color="#4479A1" /> },
+  { name: "MongoDB", icon: <SiMongodb size={40} color="#4DB33D" /> },,
   { name: "Redis", icon: <SiRedis size={40} color="#DC382D" /> },
 ];
 
@@ -33,7 +33,7 @@ export default function SkillsTech() {
         ease: "back.out(1.7)",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 70%",
         },
       });
     }, sectionRef);
@@ -42,7 +42,7 @@ export default function SkillsTech() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 bg-gray-900 text-white">
+    <section ref={sectionRef} className="py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-12">Compétences Techniques</h2>
 

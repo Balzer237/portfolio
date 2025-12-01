@@ -2,7 +2,8 @@
 
 import React from "react";
 import { FiArrowUp } from "react-icons/fi";
-import { SiWhatsapp, FiGithub, FiLinkedin, FiMail } from "react-icons/si";
+import { SiWhatsapp,  } from "react-icons/si";
+import {FiGithub, FiLinkedin, FiMail} from "react-icons/fi"
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 px-6">
@@ -10,8 +11,8 @@ export default function Footer() {
         {/* Contact info */}
         <div className="flex flex-col items-center md:items-start gap-2">
           <span className="font-semibold text-lg">Kevin — Développeur</span>
-          <a href="mailto:kevin@example.com" className="hover:underline flex items-center gap-2">
-            <FiMail /> kevin@example.com
+          <a href="mailto:kevinyemeli0@example.com" className="hover:underline flex items-center gap-2">
+            <FiMail /> kevinyemeli0@gmail.com
           </a>
         </div>
 
@@ -38,7 +39,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="mt-8 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Kevin. Tous droits réservés.
+        &copy; {new Date().getFullYear()} Kevin.
       </div>
     </footer>
   );

@@ -1,8 +1,8 @@
 "use client";
 
+import { useTranslation } from 'react-i18next';
 import { useState } from "react";
-import { Link } from '@/i18n/routing';
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import {
   FiHome,
   FiUser,
@@ -10,19 +10,20 @@ import {
   FiFileText,
   FiMail,
 } from "react-icons/fi";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/me", icon: FiHome },
-  { label: "About", href: "/about", icon: FiUser },
-  { label: "Work", href: "/work", icon: FiFolder },
+  { label: "About", href: "/me/about", icon: FiUser },
+  { label: "Work", href: "/me/work", icon: FiFolder },
   { label: "Case Studies", href: "/case-studies", icon: FiFileText },
-  { label: "Services", href: "/services", icon: FiFolder },
+  { label: "Services", href: "/me/services", icon: FiFolder },
   { label: "Blog", href: "/blog", icon: FiFileText },
-  { label: "Contact", href: "/contact", icon: FiMail },
+  { label: "Contact", href: "/me/contact", icon: FiMail },
 ];
 
 function NavItem({ href, icon: Icon, label, active, onClick }) {
+ 
   return (
     <Link
       href={href}
@@ -41,22 +42,24 @@ function NavItem({ href, icon: Icon, label, active, onClick }) {
 // COMPONENT: Sidebar
 // ---------------------------------------------
 export default function Sidebar() {
+ const {locale} = useParams()
+
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const t = useTranslations('sidbare')
+const {t}=useTranslation()
 
   const renderNav = (onClick) =>
+     
     NAV_ITEMS.map((item) => (
       <NavItem
         key={item.href}
         href={item.href}
         label={t(`${item.label}`)}
         icon={item.icon}
-        active={pathname === item.href}
+        active={pathname === `/${locale}${item.href}`}
         onClick={onClick}
       />
     ));
-
   return (
     <>
       {/* Desktop Sidebar */}

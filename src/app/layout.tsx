@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import Sidebar from "../_components/sideBar";
-
+import "./globals.css";
+import Sidebar from "./_components/sideBar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,28 +19,25 @@ export const metadata: Metadata = {
 
 export  default async function RootLayout({
   children,
-  params
 }: {
   children: React.ReactNode;
-  params:{locale:string}
+ 
 }) {
-  console.log('je suis le params',params.locale)
-   const messages = await import(`../../locales/fr.json`);
+ 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-gray-100`}>
         
-         <NextIntlClientProvider locale={params.locale} messages={messages}>
+         
             <div className="flex w-full">
               <div className="">
                 <Sidebar />
               </div>
 
-              <main className="w-full lg:ml-[15%] min-h-screen">
+              <main className="w-full lg:ml-[15%] min-h-screen bg-gray-800">
                 {children}
               </main>
             </div>
-          </NextIntlClientProvider>
           
 
       </body>
