@@ -10,7 +10,7 @@ export default function NavigationBar() {
   return (
     <div className='px-6 py-4 flex justify-end transition gap-4 bg-gray-900 lg:justify-between w-full text-white font-bold'>
       <h1 className="text-xl lg:text-2xl">
-        Portfolio's Kevin
+        Kevin's Portfolio
       </h1>
       <select>
         

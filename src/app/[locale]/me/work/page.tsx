@@ -1,8 +1,21 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt, FaReact} from 'react-icons/fa';
 import { SiNextdotjs, SiTailwindcss, SiRedux, SiFramer } from 'react-icons/si';
 
+const handleDownloadGooglePlay = () => {
+    window.open(
+      "https://play.google.com/store/apps/details?id=co.mendo.m_coti&pcampaignid=web_share",
+      "_blank"
+    );
+  };
+  const handleDownloadAppStore = () => {
+    window.open(
+      "https://apps.apple.com/cm/app/mendocoti/id6450121173",
+      "_blank"
+    );
+  };
 const projects = [
   {
     name: "Mendo Coti",
@@ -13,6 +26,8 @@ const projects = [
     link: "#",
     github: "#",
     category: "web",
+    onclickAppStore:handleDownloadGooglePlay,
+    onclickApple:handleDownloadAppStore,
     features: ["Gestion multi-rôles", "Transactions sécurisées", "Tableau de bord analytique", "Notifications automatisées"]
   },
   {
@@ -186,16 +201,35 @@ export default function WorkPage() {
                   {/* Actions */}
                   <div className="flex gap-4 pt-4">
                    
+                    { project.onclickAppStore&&
+                    <div className="m-auto   mb-4 flex grid-cols-2 justify-center gap-x-3 px-4   md:gap-x-16">
+                       
+                        <div
+                          className="flex cursor-pointer grid-cols-1"
+                          onClick={handleDownloadGooglePlay}
+                        >
+                          <img
+                          width={48}
+                          height={35}
+                            src={"/images/downloadGoogleplay.png"}
+                            alt="Mendo coti googleplay download"
+                            className="h-13 objet-cover w-48 cursor-pointer"
+                          />
+                        </div>
+                        <div
+                          className="flex cursor-pointer grid-cols-1"
+                          onClick={handleDownloadAppStore}
+                        >
+                          <img
+                          width={48}
+                          height={35}
+                            src={"/images/downloadAppstore.png"}
+                            alt="Mendo coti appstore download"
+                            className="h-13 objet-cover w-48 cursor-pointer"
+                          />
+                        </div>
+                      </div>}
                     
-                    <motion.a
-                      href={project.github}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub className="w-4 h-4" />
-                      <span>Code source</span>
-                    </motion.a>
                   </div>
                 </div>
               </div>
