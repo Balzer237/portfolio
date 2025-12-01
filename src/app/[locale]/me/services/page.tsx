@@ -32,6 +32,7 @@ const mobileServices = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen text-white p-6 mx-auto">
+        
       {/* En-tête avec photo intégrée */}
       <motion.div 
         className="flex flex-col md:flex-row items-center justify-between mb-16 relative"
@@ -58,20 +59,15 @@ export default function ServicesPage() {
           </motion.p>
         </div>
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, type: "spring" }}
-          className="relative"
-        >
-          <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
-          <motion.img
+        <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
+                   <motion.img
             layoutId="profil"
             src="/images/me.jpeg"
             alt="Profil"
             className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white/10 shadow-2xl"
           />
-        </motion.div>
+        </div>
       </motion.div>
 
       {/* Section Web avec timeline verticale */}
@@ -91,7 +87,7 @@ export default function ServicesPage() {
           </span>
         </motion.div>
 
-        <div className="relative">
+        <div className="grid md:grid-cols-2 gap-8 relative">
           {/* Ligne verticale décorative */}
           <div className="absolute left-0 md:left-1/4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500/30 to-purple-500/30"></div>
           
@@ -156,26 +152,27 @@ export default function ServicesPage() {
             return (
               <motion.div
                 key={idx}
-                className="relative p-6 rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 hover:border-green-500/30 transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                className="relative mb-10 pl-8 md:pl-32"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                whileHover={{ scale: 1.02 }}
               >
-                {/* Effet de surbrillance au hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                {/* Point sur la timeline */}
+                <div className="absolute left-[-4px] md:left-[calc(25%-4px)] top-6 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center z-10">
+                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                </div>
                 
-                <div className="relative">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500">
-                      <Icon className="w-6 h-6" />
+                <div className="group">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="p-2 rounded-lg bg-white/5 group-hover:bg-blue-500/20 transition-colors">
+                      <Icon className="w-6 h-6 text-blue-400" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-100 group-hover:text-white transition-colors flex-1">
+                    <h3 className="text-xl font-semibold text-gray-100 group-hover:text-white transition-colors">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-gray-400 text-lg leading-relaxed pl-16 group-hover:text-gray-300 transition-colors">
+                  <p className="text-gray-400 text-lg leading-relaxed pl-10 group-hover:text-gray-300 transition-colors">
                     {service.desc}
                   </p>
                 </div>
@@ -193,7 +190,6 @@ export default function ServicesPage() {
         viewport={{ once: true }}
       >
         <div className="flex items-center gap-4 mb-6">
-          <FaShieldAlt className="w-8 h-8 text-purple-400" />
           <h3 className="text-2xl font-bold">Mon Approche</h3>
         </div>
         <div className="grid md:grid-cols-3 gap-6">

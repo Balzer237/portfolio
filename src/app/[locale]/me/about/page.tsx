@@ -46,17 +46,19 @@ export default function AboutPage() {
             </section>
             </div>
 
-            <div className="w-full flex items-center justify-end">
-                <motion.img
+            <div className="w-full  flex items-center justify-end">
+               
+                <div className="relative">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
+                    <motion.img
                     layoutId="profil"
                     src="/images/me.jpeg"
-                    alt="arrow down"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className='profil border-r border-t border-white w-50 h-50 lg:w-100 lg:h-100 rounded-full mx-auto mb-4' 
+                    alt="Profil"
+                    className="relative w-40 h-40 md:w-100 md:h-100 rounded-full object-cover border-4 border-white/10 shadow-2xl"
                 />
+                </div>
+                
+                
             </div>
         </div>
 

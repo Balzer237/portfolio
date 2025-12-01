@@ -9,14 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 const webSkills = [
   {
     name: "Next.js / React",
-    desc: "Applications web rapides et scalables, SSR/SSG, routage avancé, gestion d'état locale avec Redux, intégration API avec TanStack Query"
+    desc: "Applications web rapides et scalables, SSR/SSG, routage avancé, gestion d'état locale avec Redux, intégration API avec Axios "
   },
   {
     name: "TanStack Query / API State",
     desc: "Fetching et mise en cache de données, pagination, synchronisation automatique avec le backend"
   },
   {
-    name: "Animations Web (GSAP, Framer Motion, Locomotive lenix)",
+    name: "Animations Web (GSAP, Framer Motion, Locomotive lenis)",
     desc: "Transitions fluides, micro-interactions et animations UX modernes"
   },
   {
@@ -49,7 +49,6 @@ const devOpsSkills = [
   { name: "CI/CD (GitHub Actions / Pipelines)", desc: "Automatisation des déploiements fiables et rapides" },
   { name: "Docker & Containerization", desc: "Isolation des applications et portabilité multi-environnements" },
   { name: "VPS / Nginx / Hosting", desc: "Configuration et maintenance de serveurs performants" },
-  { name: "Monitoring & Logs", desc: "Surveillance continue pour applications stables et performantes" },
   { name: "Testing & QA", desc: "Tests unitaires, d'intégration et E2E pour un code robuste et maintenable" },
 ];
 
