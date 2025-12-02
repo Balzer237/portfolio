@@ -71,15 +71,15 @@ export default function AboutPage() {
       </section>
 
       <ExpertiseSection/>
-      <section className="mt-24 text-center">
+      <section className="mt-24 text-center flex flex-col items-center justify-center gap-3">
         <h2 className="text-3xl font-semibold">Interested in working together?</h2>
         <p className="text-neutral-400 mt-2">Let’s build something great.</p>
-        <a
-          href="/contact"
-          className="inline-block mt-6 px-8 py-3 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition"
-        >
-          Contact Me
-        </a>
+          <a
+            href={`/me/contact`}
+            className="px-8 py-4 w-fit border border-white text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-white/10"
+          >
+            Me contacter
+          </a>
       </section>
      </div>
      

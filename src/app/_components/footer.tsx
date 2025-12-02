@@ -18,13 +18,13 @@ export default function Footer() {
 
         {/* Social links */}
         <div className="flex gap-6">
-          <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
+          <a href="https://github.com/balzer237" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
             <FiGithub size={24} />
           </a>
-          <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
+          <a href="https://linkedin.com/in/kevin" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
             <FiLinkedin size={24} />
           </a>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
+          <a href="https://wa.me/+237659128072" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
             <SiWhatsapp size={24} />
         </a>
         </div>

@@ -19,6 +19,7 @@ const webServices = [
   { title: "Gestion d'état", desc: "Redux et TanStack Query pour des apps web performantes et réactives.", icon: FaLayerGroup },
   { title: "UI / UX Design", desc: "Tailwind CSS, responsive design, dark mode, animations Framer Motion.", icon: FaPalette },
   { title: "Optimisation & performance", desc: "Lazy loading, code splitting, SEO et bonnes pratiques web.", icon: FaBolt },
+  { title: "Migration", desc: "Migration des projets react vers Next.js.", icon: FaBolt },
 ];
 
 const mobileServices = [
@@ -145,7 +146,7 @@ export default function ServicesPage() {
 
         <div className="grid md:grid-cols-2 gap-8 relative">
           {/* Arrière-plan décoratif */}
-          <div className="absolute -inset-4 bg-gradient-to-br from-green-500/5 to-emerald-500/5 rounded-3xl blur-3xl"></div>
+          <div className="absolute -inset-4 rounded-3xl blur-3xl"></div>
           
           {mobileServices.map((service, idx) => {
             const Icon = service.icon;

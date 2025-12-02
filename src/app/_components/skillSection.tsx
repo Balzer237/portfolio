@@ -48,9 +48,9 @@ export default function SkillsTech() {
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 justify-items-center">
           {skills.map((skill) => (
-            <div key={skill.name} className="skill-item flex flex-col items-center gap-2">
-              {skill.icon}
-              <span className="text-sm mt-2">{skill.name}</span>
+            <div key={skill?.name} className="skill-item flex flex-col items-center gap-2">
+              {skill?.icon}
+              <span className="text-sm mt-2">{skill?.name}</span>
             </div>
           ))}
         </div>

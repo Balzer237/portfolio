@@ -21,7 +21,7 @@ const NAV_ITEMS = [
   { label: "Contact", href: "/me/contact", icon: FiMail },
 ];
 
-function NavItem({ href, icon: Icon, label, active, onClick,canClick=true }) {
+function NavItem({ href, icon: Icon, label, active, onClick,canClick=true }:{href:string,icon:any,label:string,active:boolean,onClick:any,canClick:boolean}) {
  
   return (
     <Link
@@ -47,7 +47,7 @@ export default function Sidebar() {
   const [open, setOpen] = useState(false);
 const {t}=useTranslation()
 
-  const renderNav = (onClick) =>
+  const renderNav = (onClick?:any) =>
      
     NAV_ITEMS.map((item) => (
       <NavItem
@@ -56,7 +56,7 @@ const {t}=useTranslation()
         label={t(`${item.label}`)}
         icon={item.icon}
         active={pathname === `/${locale}${item.href}`}
-        onClick={onClick}
+        onClick={onClick&&onClick}
         canClick={item.active??true}
       />
     ));

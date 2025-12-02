@@ -82,13 +82,19 @@ const {t}= useTranslation()
         </p>
 
         <div className="hero-cta mt-8 flex gap-4 justify-center">
-          <button className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-neutral-200 transition">
-            {t('Mes service')}
-          </button>
+          <a
+            href={`/me/services`}
+            className="px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-100"
+          >
+            Voir mes service
+          </a>
 
-          <button className="px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white/10 transition">
-            {t('contact')}
-          </button>
+          <a
+            href={`/me/contact`}
+            className="px-8 py-4 border border-white text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-white/10"
+          >
+            Me contacter
+          </a>
         </div>
       </div>
     </section>

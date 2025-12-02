@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from "react";
-import { RouteName } from "../lib/routeName";
 import { useRouter } from "next/navigation";
+import { RouteName } from "@/src/lib/routeName";
 
 export default function Home() {
   const router = useRouter()
