@@ -21,7 +21,7 @@ export default function Footer() {
           <a href="https://github.com/balzer237" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
             <FiGithub size={24} />
           </a>
-          <a href="https://linkedin.com/in/kevin" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
+          <a href="https://linkedin.com/in/kevin-yemeli-83435a341" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">
             <FiLinkedin size={24} />
           </a>
           <a href="https://wa.me/+237659128072" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition">

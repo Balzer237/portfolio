@@ -23,12 +23,11 @@ export default function ContactPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      console.log('je suis la responce',res)
       if (res.ok) {
         setSubmitted(true);
         
       } else {
-        alert("Erreur lors de l’envoi du message");
+        alert("Erreur lors de l’envoi du message, ci ce probleme ce prolonge, bien vouloir utiliser les options sous le formulaire merci!");
          
       }
      
@@ -98,8 +97,9 @@ export default function ContactPage() {
       <div className="mt-8 text-center text-white space-y-2 text-gray-700">
         <p>Email: <a href="mailto:kevinyemeli0@gmail.com" className="text-blue-600 flex items-center gap-2">{<FiMail/>}kevinyemeli0@gmail.com</a></p>
         <p className="flex items-center gap-2">{<SiWhatsapp/>}{<SiTelegram/>} Telephone: +237 659128072</p>
-        <p>LinkedIn: <a href="#" className="text-blue-600">Mon profil</a></p>
-        <p>GitHub: <a href="#" className="text-blue-600">Mon profil</a></p>
+        <p className="flex items-center gap-2"> Appel/sms: +237 692808705</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/kevin-yemeli-83435a341" className="text-blue-600">Mon profil</a></p>
+        <p>GitHub: <a href="https://github.com/balzer237" className="text-blue-600">Mon profil</a></p>
       </div>
     </div>
   );
