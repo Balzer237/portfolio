@@ -8,17 +8,33 @@ import { FiMail } from "react-icons/fi";
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+ 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-    setSubmitted(true);
-    // Ici tu peux ajouter ton backend/API pour envoyer le message
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+
+
+        const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      console.log('je suis la responce',res)
+      if (res.ok) {
+        setSubmitted(true);
+        
+      } else {
+        alert("Erreur lors de l’envoi du message");
+         
+      }
+     
+      
+    };
+
 
   return (
     <div className="min-h-screen flex flex-col text-white items-center justify-center p-6">
@@ -74,7 +90,7 @@ export default function ContactPage() {
             type="submit"
             className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
           >
-            Envoyer
+            {submitted?"Message Envoyer":"Envoyer"}
           </button>
         </form>
       )}
