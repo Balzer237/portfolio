@@ -27,7 +27,7 @@ export default function ContactPage() {
         setSubmitted(true);
         
       } else {
-        alert("Erreur lors de l’envoi du message, ci ce probleme ce prolonge, bien vouloir utiliser les options sous le formulaire merci!");
+        alert("Erreur lors de l’envoi du message, si ce probleme ce prolonge, bien vouloir utiliser les options sous le formulaire merci!");
          
       }
      
