@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./_components/sideBar";
+import ClientWrapper from "../lib/lenis/wrapper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export  default async function RootLayout({
               </div>
 
               <main className="w-full lg:ml-[15%] min-h-screen bg-gray-800">
-                {children}
+                <ClientWrapper>{children}</ClientWrapper>
               </main>
             </div>
           
