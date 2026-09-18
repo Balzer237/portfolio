@@ -61,7 +61,7 @@ export default function ServicesPage() {
         </div>
         
         <div className="relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-white rounded-full blur-xl"></div>
+                    <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-xl"></div>
                    <motion.img
             layoutId="profil"
             src="/images/me.jpeg"
@@ -79,7 +79,7 @@ export default function ServicesPage() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500">
+          <div className="p-3 rounded-xl bg-blue-500">
             <FaReact className="w-8 h-8" />
           </div>
           <h2 className="text-3xl font-bold">Développement Web</h2>
@@ -90,7 +90,7 @@ export default function ServicesPage() {
 
         <div className="grid md:grid-cols-2 gap-8 relative">
           {/* Ligne verticale décorative */}
-          <div className="absolute left-0 md:left-1/4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500/30 to-purple-500/30"></div>
+          <div className="absolute left-0 md:left-1/4 top-0 bottom-0 w-0.5 bg-blue-500/30"></div>
           
           {webServices.map((service, idx) => {
             const Icon = service.icon;
@@ -104,7 +104,7 @@ export default function ServicesPage() {
                 transition={{ delay: idx * 0.1 }}
               >
                 {/* Point sur la timeline */}
-                <div className="absolute left-[-4px] md:left-[calc(25%-4px)] top-6 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center z-10">
+                <div className="absolute left-[-4px] md:left-[calc(25%-4px)] top-6 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center z-10">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 
@@ -135,7 +135,7 @@ export default function ServicesPage() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <div className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500">
+          <div className="p-3 rounded-xl bg-green-500">
             {/* <FaFlutter className="w-8 h-8" /> */}
           </div>
           <h2 className="text-3xl font-bold">Développement Mobile</h2>
@@ -160,7 +160,7 @@ export default function ServicesPage() {
                 transition={{ delay: idx * 0.1 }}
               >
                 {/* Point sur la timeline */}
-                <div className="absolute left-[-4px] md:left-[calc(25%-4px)] top-6 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center z-10">
+                <div className="absolute left-[-4px] md:left-[calc(25%-4px)] top-6 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center z-10">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 
@@ -185,7 +185,7 @@ export default function ServicesPage() {
 
       {/* Section supplémentaire - Approche */}
       <motion.div 
-        className="mt-24 p-8 rounded-3xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-white/10 backdrop-blur-sm"
+        className="mt-24 p-8 rounded-3xl bg-gray-900/50 border border-white/10 backdrop-blur-sm"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
