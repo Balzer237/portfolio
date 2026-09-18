@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import Sidebar from "./_components/sideBar";
 import ClientWrapper from "../lib/lenis/wrapper";
+import GoogleAnalytics from "./_components/analytics/GoogleAnalytics";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,7 +39,7 @@ export  default async function RootLayout({
                 <ClientWrapper>{children}</ClientWrapper>
               </main>
             </div>
-          
+          <GoogleAnalytics/>
 
       </body>
     </html>
