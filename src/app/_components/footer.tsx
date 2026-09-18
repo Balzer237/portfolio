@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Contact info */}
         <div className="flex flex-col items-center md:items-start gap-2">
-          <span className="font-semibold text-lg">Kevin — Développeur</span>
+          <span className="font-semibold text-lg">Kevin - Développeur</span>
           <a href="mailto:kevinyemeli0@example.com" className="hover:underline flex items-center gap-2">
             <FiMail /> kevinyemeli0@gmail.com
           </a>

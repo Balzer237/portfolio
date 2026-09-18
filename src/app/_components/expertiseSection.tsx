@@ -86,7 +86,7 @@ export default function ExpertiseSection() {
             <ul className="flex flex-col gap-4">
               {webSkills.map((skill) => (
                 <li key={skill.name} className="hover:translate-x-2 transition-transform duration-300">
-                  <span className="font-semibold">{skill.name}</span> — {skill.desc}
+                  <span className="font-semibold">{skill.name}</span>: {skill.desc}
                 </li>
               ))}
             </ul>
@@ -98,7 +98,7 @@ export default function ExpertiseSection() {
             <ul className="flex flex-col gap-4">
               {mobileSkills.map((skill) => (
                 <li key={skill.name} className="hover:translate-x-2 transition-transform duration-300">
-                  <span className="font-semibold">{skill.name}</span> — {skill.desc}
+                  <span className="font-semibold">{skill.name}</span>: {skill.desc}
                 </li>
               ))}
             </ul>
@@ -111,7 +111,7 @@ export default function ExpertiseSection() {
           <ul className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
             {devOpsSkills.map((skill) => (
               <li key={skill.name} className="hover:translate-x-2 transition-transform duration-300">
-                <span className="font-semibold">{skill.name}</span> — {skill.desc}
+                <span className="font-semibold">{skill.name}</span>: {skill.desc}
               </li>
             ))}
           </ul>

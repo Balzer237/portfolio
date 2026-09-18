@@ -42,6 +42,29 @@ const projects = [
     features: ["Classes virtuelles", "Messagerie intégrée", "Progress tracking", "Certifications digitales"]
   },
   {
+    name: "Coli",
+    description: "Application de logistique multirôle permettant aux particuliers d'envoyer leurs colis à un proche ou à un client, avec des parcours dédiés aux clients, aux livreurs indépendants et aux livreurs d'agence.",
+    technologies: ["Logistique", "Multi-rôles", "Mobile"],
+    stackIcons: [],
+    image: "/images/coli.png",
+    portrait: true,
+    link: "#",
+    github: "#",
+    category: "mobile",
+    features: ["Espace client", "Livreurs indépendants", "Livreurs d'agence", "Disponible sur iOS et Android"]
+  },
+  {
+    name: "DataScope",
+    description: "SaaS de gestion et de centralisation des données permettant aux organisations de choisir entre un modèle analytique généralisé et un modèle locatif dédié à l'hôtellerie et à la gestion immobilière.",
+    technologies: ["SaaS", "Data management", "Analytics"],
+    stackIcons: [],
+    image: "/images/dataScope.png",
+    link: "#",
+    github: "#",
+    category: "web",
+    features: ["Modèle analytique", "Modèle locatif", "Données multi-départements", "Gestion immobilière"]
+  },
+  {
     name: "MVP Core Banking",
     description: "Solution bancaire digitale complète offrant une gestion centralisée des comptes, transactions, prêts et services financiers, interface administrateur.",
     technologies: ["Next.js", "Tailwind CSS", "React", "Redux", "Framer Motion"],
@@ -50,17 +73,6 @@ const projects = [
     github: "#",
     category: "web",
     features: ["Multi-agences", "Reporting avancé", "API banking", "Sécurité bancaire"]
-  },
-  {
-    name: "Portfolio Personnel",
-    description: "Vitrine digitale interactive présentant mon expertise technique et mes réalisations à travers une expérience utilisateur immersive et des animations fluides.",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    stackIcons: [SiNextdotjs, SiTailwindcss, SiFramer],
-    image: "/images/portfolio.png",
-    link: "#",
-    github: "#",
-    category: "web",
-    features: ["Design responsive", "Animations Framer", "Performance optimale", "SEO technique"]
   },
 ];
 
@@ -141,15 +153,9 @@ export default function WorkPage() {
                     <img 
                       src={project.image} 
                       alt={project.name} 
-                      className="w-full h-64 md:h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                      className={`w-full h-64 md:h-80 ${project.portrait ? 'object-contain bg-black/20' : 'object-cover'} transform group-hover:scale-105 transition-transform duration-700`}
                     />
                     
-                    {/* Badge catégorie */}
-                    <div className={`absolute top-4 ${isEven ? 'right-4' : 'left-4'} z-20`}>
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${project.category === 'web' ? 'bg-cyan-500/20 text-cyan-300' : 'bg-purple-500/20 text-purple-300'}`}>
-                        {project.category === 'web' ? 'WEB' : 'MOBILE'}
-                      </span>
-                    </div>
                   </div>
                 </motion.div>
 
@@ -249,7 +255,7 @@ export default function WorkPage() {
           Un projet en tête ? <span className="text-white font-semibold">Transformons-le ensemble</span>
         </p>
         <motion.a
-          href="#contact"
+          href="/me/contact"
           className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
