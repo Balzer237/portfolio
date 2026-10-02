@@ -41,18 +41,7 @@ const projects = [
     category: "web",
     features: ["Classes virtuelles", "Messagerie intégrée", "Progress tracking", "Certifications digitales"]
   },
-  {
-    name: "Coli",
-    description: "Application de logistique multirôle permettant aux particuliers d'envoyer leurs colis à un proche ou à un client, avec des parcours dédiés aux clients, aux livreurs indépendants et aux livreurs d'agence.",
-    technologies: ["Logistique", "Multi-rôles", "Mobile"],
-    stackIcons: [],
-    image: "/images/coli.png",
-    portrait: true,
-    link: "#",
-    github: "#",
-    category: "mobile",
-    features: ["Espace client", "Livreurs indépendants", "Livreurs d'agence", "Disponible sur iOS et Android"]
-  },
+ 
   {
     name: "DataScope",
     description: "SaaS de gestion et de centralisation des données permettant aux organisations de choisir entre un modèle analytique généralisé et un modèle locatif dédié à l'hôtellerie et à la gestion immobilière.",
@@ -153,7 +142,7 @@ export default function WorkPage() {
                     <img 
                       src={project.image} 
                       alt={project.name} 
-                      className={`w-full h-64 md:h-80 ${project.portrait ? 'object-contain bg-black/20' : 'object-cover'} transform group-hover:scale-105 transition-transform duration-700`}
+                      className={`w-full h-64 md:h-80 ${'object-cover'} transform group-hover:scale-105 transition-transform duration-700`}
                     />
                     
                   </div>
